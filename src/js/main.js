@@ -10,4 +10,23 @@ $(document).ready(function() {
       .removeClass('navbar__list_open');
   });
 
+  /* Настройка Slick Slider */
+  /* $('.hero-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    // appendDots: $('.slick-dots'),
+    dotsClass: $('.hero__dot')
+  }); */
+
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    dots: true,
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true
+  });
+
 });

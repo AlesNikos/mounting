@@ -1,0 +1,104 @@
+.hero
+  &-slider
+    &__item
+      padding-top: 204px
+      padding-bottom: 35px
+      transition: 1s
+      &-1
+        background: url('../img/hero/image-1.jpg') center no-repeat
+      &-2
+        background: url('../img/hero/image-2.jpg') center no-repeat
+      &-3
+        background: url('../img/hero/image-3.jpg') center no-repeat
+      &-4
+        background: url('../img/hero/image-4.jpg') center no-repeat
+  &-text
+    &__title
+      margin: 0
+      margin-bottom: 11px
+      margin-left: -3px
+      font-size: 35px
+      text-transform: uppercase
+      color: $main-color
+      +semibold
+      letter-spacing: 0.1px
+      span 
+        display: inline-block
+        margin-left: 9px
+    &__subtitle
+      display: block
+      margin-left: -2px
+      font-size: 35px
+      color: $light-color
+    &__description
+      display: block
+      margin-top: 26px
+      margin-bottom: 49px
+      font-size: 20px
+      font-weight: 300
+      line-height: 28px
+      color: change-color($light-color, $alpha: 0.42)
+      letter-spacing: -0.12px
+  &__button
+    padding: 11px 38px 13px 39px
+    margin-bottom: 237px
+    font-size: 18px
+    text-transform: uppercase
+    letter-spacing: 0.2px
+  &__dot
+    width: 20px
+    height: 20px
+    background-color: $light-color
+    list-style: none
+    &s
+      display: flex
+      justify-content: space-between
+      width: 112px
+      margin: 0 auto
+      margin-bottom: 45px
+
+@media (max-width: 1200px)
+  .hero
+    &-text
+      text-align: center
+    &-slider
+      &__item 
+        padding-top: 164px
+
+@media (max-width: 992px)
+  .hero
+    &-slider
+      &__item 
+        padding-top: 136px
+
+@media (max-width: 768px)
+  .hero
+    &-text
+      &__title
+        font-size: 24px
+      &__subtitle
+        font-size: 24px
+      &__description
+        font-size: 16px
+        line-height: 1.2
+    &__button
+      padding-top: 13px
+      margin-bottom: 130px
+      font-size: 14px
+
+@media (max-width: 576px)
+  .hero
+    &-slider
+      &__item 
+        padding-top: 50px
+        padding-bottom: 20px
+    &-text
+      &__title
+        font-size: 18px
+      &__subtitle
+        font-size: 18px
+      &__description
+        font-size: 14px
+    &__button
+      font-size: 10px
+

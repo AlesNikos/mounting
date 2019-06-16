@@ -1,6 +1,6 @@
 .navbar
   position: relative
-  padding: 7px 0 5px
+  padding: 7px 0 4px
   background-color: change-color($light-color, $lightness: 95%, $alpha: 0.55)
   &:before 
     content: ''
@@ -78,6 +78,7 @@
       letter-spacing: 0.3px
   &__button
     padding: 8px 15px 7px
+  /* Кнопка бургер меню */
   &__icon
     display: none
     width: 40px
@@ -104,6 +105,7 @@
     &_open
       .navbar__links
         display: block
+      /* Преобразуется в крестик при нажатии на меню */
       .navbar__icon
         span
           &:nth-child(1)
