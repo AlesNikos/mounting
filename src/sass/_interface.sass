@@ -2,7 +2,8 @@
   box-sizing: border-box
 
 body
-  // +light
+  +reg
+  color: $text-color
 
 img
   max-width: 100%
@@ -10,6 +11,9 @@ img
 button, input, a, textarea, select 
   &:focus 
     outline: none
+
+a
+  text-decoration: none
 
 .container
   width: 1170px
@@ -30,3 +34,15 @@ button, input, a, textarea, select
 @media (max-width: 576px)
   .container
     max-width: 275px
+
+.button 
+  padding: 10px 15px
+  border: none
+  background-color: $main-color
+  font-size: 14px
+  transition: 0.2s
+@media (min-width: 992px)
+  .button
+    &:hover 
+      background-color: darken($main-color, 5%)
+      cursor: pointer

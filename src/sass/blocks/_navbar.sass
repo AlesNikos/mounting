@@ -1,0 +1,205 @@
+.navbar
+  position: relative
+  padding: 7px 0 5px
+  background-color: change-color($light-color, $lightness: 95%, $alpha: 0.55)
+  &:before 
+    content: ''
+    width: 59.3%
+    height: 100%
+    position: absolute
+    background-color: $light-color
+    top: 0
+    left: 0
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    position: relative
+  &__links
+    display: flex
+    justify-content: space-between
+    width: 510px  
+    margin-left: 136px
+    margin-bottom: 6px
+  &__link
+    cursor: pointer
+    position: relative
+    font-size: 16px
+    color: $text-color
+    &:before
+      content: ''
+      position: absolute
+      left: -29px
+      top: 3px
+      width: 1px
+      height: 12px
+      background-color: #000000
+      opacity: 0.15
+    &:first-child
+      &:before 
+        display: none
+    &:nth-child(2)
+      &:before
+        left: -32px
+    &:after
+      content: ''
+      display: block
+      background-color: $main-color
+      position: absolute
+      margin-top: 3px
+      height: 2px
+      width: 0%
+      left: 50%
+      position:absolute
+      transition: width 0.3s ease-in-out
+      transform: translateX(-50%)
+  &__info
+    display: flex
+    justify-content: space-between
+    width: 355px
+  &__contacts
+    display: flex
+    align-items: center
+  &__image
+    margin-bottom: 4px
+    position: relative
+  &__phone
+    margin-left: 7px
+    margin-bottom: 6px
+    font-size: 18px
+    color: $text-color
+    span
+      font-weight: 700
+      letter-spacing: 0.3px
+  &__button
+    padding: 8px 15px 7px
+  &__icon
+    display: none
+    width: 40px
+    height: 35px
+    position: relative
+    span 
+      display: block
+      position: absolute
+      height: 5px
+      width: 100%
+      background: $main-color
+      border-radius: 9px
+      opacity: 1
+      left: 0
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2), &:nth-child(3)
+        top: 13px
+      &:nth-child(4)
+        top: 26px
+  &__list
+    &_open
+      .navbar__links
+        display: block
+      .navbar__icon
+        span
+          &:nth-child(1)
+            top: 18px
+            width: 0%
+            left: 50%
+          &:nth-child(2)
+            transform: rotate(45deg)
+          &:nth-child(3)
+            transform: rotate(-45deg)
+          &:nth-child(4)
+            top: 18px
+            width: 0%
+            left: 50%
+
+  
+@media (max-width: 1200px)
+  .navbar
+    &:before 
+      width: 61%
+    &__links 
+      margin-left: 25px
+    &__info 
+      width: 330px
+
+@media (max-width: 992px)
+  .navbar
+    background-color: $light-color
+    &:before 
+      display: none
+    &__icon
+      display: inline-block
+      margin-left: 30px
+    &__list
+      position: relative
+    &__links
+      display: none
+      position: fixed
+      width: 720px
+      top: 0
+      right: 0
+      left: 0
+      margin: 82px auto 0
+      background-color: rgba(0, 0, 0, 0.8)
+      z-index: 1000
+      overflow: auto
+    &__link
+      display: block
+      padding: 10px 0
+      text-align: center
+      color: #ffffff
+    
+@media (min-width: 992px)
+  .navbar
+    &__link
+      &:hover
+        color: $main-color
+        transition: 0.2s
+        &:after
+          width: 100%
+
+@media (max-width: 768px)
+  .navbar
+    &__links
+      max-width: 540px
+
+@media (max-width: 576px)
+  .navbar 
+    &__logo
+      width: 30px
+    &__icon
+      width: 30px
+      height: 25px
+      margin-top: 10px
+      span
+        height: 3px
+        &:nth-child(1)
+          top: 0
+        &:nth-child(2), &:nth-child(3)
+          top: 8px
+        &:nth-child(4)
+          top: 16px
+    &__links
+      width: 100%
+      margin-top: 56px
+    &__contacts
+      display: none
+    &__info
+      justify-content: flex-end
+      max-width: 130px  
+    &__button
+      font-size: 10px
+
+
+
+
+
+
+    
