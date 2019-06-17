@@ -431,6 +431,13 @@ a {
   transition: 0.2s;
 }
 
+@media (min-width: 992px) {
+  .button:hover {
+    background-color: #e6b400;
+    cursor: pointer;
+  }
+}
+
 /* Настройка стилей для слайдера */
 /* Slider */
 .slick-slider {
@@ -1558,60 +1565,12 @@ a {
   font-weight: 400;
   line-height: 26px;
   color: #ffffff;
-  /* &_active
-      margin: 0
-      margin-bottom: 25px
-      font-size: 20px
-      font-weight: 400
-      line-height: 26px
-      color: $text-color */
-}
-
-.service__text:hover .service__text span {
-  display: none;
-}
-
-.service__text:hover .service__text:after {
-  content: 'Здесь будет короткое описание о данной услуге';
-  margin: 0;
-  margin-bottom: 25px;
-  margin-left: 9px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 26px;
-  color: #020202;
 }
 
 .service__button {
   padding: 8px 19px 8px 21px;
   font-size: 15px;
   text-transform: uppercase;
-  /* &_active
-      display: none
-      padding: 10px 15px
-      background-color: $text-color
-      color: $light-color
-      text-transform: uppercase
-      border: none */
-}
-
-.service__button:hover {
-  color: red;
-}
-
-.service__button:hover .service__text span {
-  display: none;
-}
-
-.service__button:hover .service__text:after {
-  content: 'Здесь будет короткое описание о данной услуге';
-  margin: 0;
-  margin-bottom: 25px;
-  margin-left: 9px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 26px;
-  color: #020202;
 }
 
 .cards {
