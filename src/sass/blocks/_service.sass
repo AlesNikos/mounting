@@ -1,0 +1,103 @@
+.service
+  padding: 104px 0 96px
+  background-color: change-color($light-color, $lightness: 95%, $alpha: 0.55)
+  &__title
+    position: absolute
+    display: inline-block
+    margin: 0
+    padding: 13px 66px 13px 68px
+    font-size: 28px
+    text-transform: uppercase
+    +semibold
+    background-color: $main-color
+    top: -133px
+    left: -32px
+  &__card
+    width: 377px
+    min-height: 236px
+    margin-bottom: 21px
+    padding-top: 58px
+    text-align: center
+    filter: grayscale(100%)
+    &-1
+      background: url('../img/service/image-1.png') center no-repeat
+      background-size: contain
+    &-2
+      background: url('../img/service/image-2.png') center no-repeat
+      background-size: contain
+    &-3
+      background: url('../img/service/image-3.png') center no-repeat
+      background-size: contain
+    &-4
+      background: url('../img/service/image-1.png') center no-repeat
+      background-size: contain
+    &-5
+      background: url('../img/service/image-2.png') center no-repeat
+      background-size: contain
+    &-6
+      background: url('../img/service/image-3.png') center no-repeat
+      background-size: contain
+  &__text
+    margin: 0
+    margin-bottom: 25px
+    margin-left: 9px
+    font-size: 20px
+    font-weight: 400
+    line-height: 26px
+    color: $light-color
+  &__button
+    padding: 8px 19px 8px 21px
+    font-size: 15px
+    text-transform: uppercase
+.card
+  &s
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+@media (min-width: 992px)
+  .service
+    &__card
+      &:hover
+        filter: none
+
+@media (max-width: 1200px)
+  .service
+    &__title 
+      left: -10px
+  .card
+    &s
+      justify-content: space-around
+
+@media (max-width: 992px)
+  .service
+    &__card
+      max-width: 350px
+      min-height: 220px
+  .card
+    &s
+      justify-content: space-between
+
+@media (max-width: 768px)
+  .service
+    padding: 85px 0 60px
+    &__title
+      font-size: 24px
+      top: -110px
+  .card
+    &s
+      justify-content: center
+
+@media (max-width: 576px)
+  .service
+    &__title
+      font-size: 18px
+    &__card
+      max-width: 275px
+      min-height: 172px
+      padding-top: 40px
+    &__text
+      font-size: 16px
+      line-height: 1.2
+    &__button
+      font-size: 10px
