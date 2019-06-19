@@ -1660,6 +1660,10 @@ a {
   background-color: rgba(242, 242, 242, 0.55);
 }
 
+.about__position {
+  margin-bottom: 140px;
+}
+
 .about:after {
   content: '';
   width: 42.7%;
@@ -1930,3 +1934,5 @@ a {
     line-height: 1.2;
   }
 }
+
+/* Подключение стиле для блока Отзывы  */
