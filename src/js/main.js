@@ -30,13 +30,27 @@ $(document).ready(function() {
     dotsClass: $('.hero__dot')
   }); */
 
-  $('.owl-carousel').owlCarousel({
+  $('.hero-slider').owlCarousel({
     loop: true,
     dots: true,
     items: 1,
     autoplay: false,
     autoplayTimeout: 5000,
     autoplayHoverPause: true
+  });
+
+  $('.feedback-slider').owlCarousel({
+    loop: true,
+    dots: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      992: {
+        items: 2
+      },
+    }
   });
 
   new WOW().init();

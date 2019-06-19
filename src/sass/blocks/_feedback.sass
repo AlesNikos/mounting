@@ -1,0 +1,97 @@
+.feedback
+  padding: 112px 0 39px
+  background-color: $text-color
+  &__position
+    margin-bottom: 147px
+  &__title
+    position: absolute
+    padding: 13px 62px 13px 64px
+    margin: 0
+    top: -137px
+    left: -32px
+  &-slider
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      max-width: 466px
+      min-height: 469px
+      text-align: center
+      &-2
+        margin-left: 116px
+  &__images
+    position: relative
+    margin-bottom: 16px
+  &__icon
+    position: absolute
+    top: -1px
+    right: 4px
+  &__heading
+    margin: 0
+    margin-bottom: 17px
+    padding-left: 3px;
+    font-size: 20px
+    color: $main-color
+    +semibold
+  &__text
+    margin: 0
+    margin-bottom: 23px
+    font-size: 20px
+    color: $light-color
+    line-height: 28px
+    span
+      padding-left: 4px
+  &__like
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    width: 45px
+    &s
+      display: flex
+      justify-content: space-between
+      width: 110px
+      &-2
+        margin-left: 7px
+  &__dislike
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    width: 36px
+  &__counter
+    display: inline-block
+    font-size: 15px
+    color: $light-color
+
+@media (max-width: 1200px)
+  .feedback
+    &-slider
+      &__item
+        &-2
+          margin-left: 14px
+
+@media (max-width: 992px)
+  .feedback
+    &-slider
+      &__item
+        margin-left: auto
+        margin-right: auto
+
+@media (max-width: 768px)
+  .feedback
+    &__position
+      margin-bottom: 70px
+    &__title
+      left: -10px
+      font-size: 24px
+
+@media (max-width: 576px)
+  .feedback
+    padding: 70px 0 45px
+    &__title
+      top: -90px
+      font-size: 18px
+    &__heading
+      font-size: 18px
+    &__text
+      font-size: 14px
+      line-height: 1.4
