@@ -39,4 +39,6 @@ $(document).ready(function() {
     autoplayHoverPause: true
   });
 
+  new WOW().init();
+
 });
