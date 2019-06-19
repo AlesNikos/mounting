@@ -34,7 +34,7 @@ $(document).ready(function() {
     loop: true,
     dots: true,
     items: 1,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true
   });
