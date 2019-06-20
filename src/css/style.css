@@ -2413,6 +2413,7 @@ div.invalid {
 .request {
   padding-top: 141px;
   position: relative;
+  min-height: 666px;
 }
 
 .request__form {
@@ -2514,5 +2515,134 @@ div.invalid {
   }
   .request__button {
     font-size: 14px;
+  }
+}
+
+/* Подключение стилей для подвала*/
+.footer {
+  padding: 53px 0 52px;
+  background-color: #020202;
+}
+
+.footer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__social {
+  margin-left: 13px;
+}
+
+.adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adress__image {
+  margin-right: 13px;
+}
+
+.adress__text {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__link {
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 34px;
+}
+
+.social__link:last-child {
+  margin-right: 0;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 428px;
+  width: 100%;
+}
+
+.contacts-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-mail__image {
+  margin-right: 9px;
+}
+
+.contacts-mail__email {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.contacts-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.contacts-phone:before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  top: 6px;
+  width: 1px;
+  height: 15px;
+  background-color: #ffffff;
+  opacity: 0.33;
+}
+
+.contacts-phone__image {
+  margin-right: 6px;
+  margin-top: 1px;
+}
+
+.contacts-phone__number {
+  margin-right: -1px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.contacts-phone__number span {
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+@media (min-width: 992px) {
+  .social__link:hover {
+    background-color: #ffc800;
+    border-radius: 50%;
   }
 }
