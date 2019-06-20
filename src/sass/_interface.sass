@@ -65,3 +65,15 @@ a
   font-style: italic
   &:focus
     border-bottom: 1px solid orange
+
+/* Оформление инпутов в формах */
+input.invalid
+  border-bottom: 1px solid red
+
+div.invalid
+  position: absolute
+  font-size: 10px
+  color: red
+@media (max-width: 576px)
+  div.invalid
+    font-size: 8px

@@ -53,6 +53,48 @@ $(document).ready(function() {
     }
   });
 
+  /* Валидация форм */
+  $('#request-form').validate({
+    rules: {
+      user_name: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      user_phone: "required"
+    },
+    messages: {
+      user_name: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Не менее {0} символов!"),
+        maxlength: jQuery.validator.format("Не более {0} символов!")
+      },
+      user_phone: "Заполните поле"
+    },
+    errorClass: "invalid",
+    errorElement: "div"  
+  });
+
+  /* Маска для телефона */
+  $('.phone').mask('+7 (999) 999-99-99');
+
+  /* Иницализируем отправку формы */
+
+  $('form').submit(function (event) {
+    event.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function () {
+      $(this).find("input").val("");
+      alert("Заявка успешно отправлена");
+      // $('.thanks-page').fadeIn();
+      $("form").trigger("reset");
+    });
+    return false;
+  });
+
   new WOW().init();
 
 });

@@ -459,6 +459,23 @@ a {
   border-bottom: 1px solid orange;
 }
 
+/* Оформление инпутов в формах */
+input.invalid {
+  border-bottom: 1px solid red;
+}
+
+div.invalid {
+  position: absolute;
+  font-size: 10px;
+  color: red;
+}
+
+@media (max-width: 576px) {
+  div.invalid {
+    font-size: 8px;
+  }
+}
+
 /* Настройка анимации */
 .animated {
   -webkit-animation-duration: 1s;
@@ -2427,13 +2444,10 @@ a {
   margin-bottom: 36px;
 }
 
-.request__input:nth-child(2) {
-  margin-bottom: 65px;
-}
-
 .request__button {
   max-width: 305px;
   width: 100%;
+  margin-top: 29px;
   padding: 19px 51px 16px 53px;
   font-size: 20px;
   text-transform: uppercase;
@@ -2448,6 +2462,20 @@ a {
   top: 0;
   left: 0;
   right: 0;
+}
+
+#request-form {
+  position: relative;
+}
+
+#user_name-error {
+  top: 32px;
+  left: 0;
+}
+
+#user_phone-error {
+  top: 96px;
+  left: 0;
 }
 
 @media (max-width: 992px) {

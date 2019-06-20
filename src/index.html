@@ -371,9 +371,9 @@
         <div class="container">
           <div class="form request__form">
             <h3 class="request__title">оставьте <span>заявку</span></h3>
-            <form action="#">
-              <input type="text" class="input request__input" placeholder="Введите Ваше имя">
-              <input type="tel" class="input request__input" placeholder="Введите Ваш номер телефона">
+            <form action="mailer/smart.php" method="POST" class="form" id="request-form">
+              <input type="text" name="user_name" class="input request__input" placeholder="Введите Ваше имя">
+              <input type="tel" name="user_phone" class="input request__input phone" placeholder="Введите Ваш номер телефона">
               <button class="button request__button">заказать <span>звонок</span></button>
             </form>
           </div>
@@ -390,6 +390,10 @@
   <script src="js/slick.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <!-- Подключение валидатора для формы -->
+  <script src="js/jquery.validate.min.js"></script>
+  <!-- Подключаем скрипта для маски телефона -->
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
