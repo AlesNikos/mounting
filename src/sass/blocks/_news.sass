@@ -10,8 +10,10 @@
   &-block
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
   &__item
     max-width: 379px
+    margin-bottom: 66px
   &__image
     max-width: 377px
     height: 279px
@@ -44,7 +46,6 @@
   &__text
     max-width: 323px
     margin: 0
-    margin-bottom: 66px
     font-size: 18px
     line-height: 28px
     opacity: 0.83
@@ -58,3 +59,36 @@
     text-transform: uppercase
     letter-spacing: 0.2px
 
+@media (max-width: 1200px)
+  .news 
+    &-block
+      justify-content: space-around
+
+@media (max-width: 768px)
+  .news
+    &__title
+      left: -10px
+      font-size: 24px
+    &__button 
+      font-size: 14px
+
+@media (max-width: 576px)
+  .news
+    padding: 70px 0 45px
+    &__title
+      top: -90px
+      font-size: 18px
+    &__item
+      margin-bottom: 40px
+    &__image
+      max-width: 275px
+      height: 204px
+      margin-bottom: 26px
+    &__heading
+      margin-right: 40px
+      font-size: 16px
+    &__date
+      font-size: 14px
+    &__text
+      font-size: 14px
+      line-height: 1.4
