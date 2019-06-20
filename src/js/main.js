@@ -88,7 +88,7 @@ $(document).ready(function() {
       data: $(this).serialize()
     }).done(function () {
       $(this).find("input").val("");
-      alert("Заявка успешно отправлена");
+      alert("Ваша заявка принята");
       // $('.thanks-page').fadeIn();
       $("form").trigger("reset");
     });
