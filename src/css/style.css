@@ -447,6 +447,14 @@ a {
   background-color: #ffc800;
 }
 
+.input {
+  border: none;
+  border-bottom: 1px solid #020202;
+  font-size: 18px;
+  opacity: 0.65;
+  font-style: italic;
+}
+
 /* Настройка анимации */
 .animated {
   -webkit-animation-duration: 1s;
@@ -1210,7 +1218,7 @@ a {
   }
 }
 
-/* Подключение стиле для меню */
+/* Подключение стилей для меню */
 .navbar {
   position: relative;
   padding: 7px 0 4px;
@@ -1515,7 +1523,7 @@ a {
   }
 }
 
-/* Подключение стиле для блока hero  */
+/* Подключение стилей для блока hero  */
 .hero__position {
   margin-bottom: 169px;
 }
@@ -1657,7 +1665,7 @@ a {
   }
 }
 
-/* Подключение стиле для блока Услуги  */
+/* Подключение стилей для блока Услуги  */
 .service {
   margin-bottom: 143px;
   padding: 104px 0 96px;
@@ -1803,7 +1811,7 @@ a {
   }
 }
 
-/* Подключение стиле для блока Почему мы?  */
+/* Подключение стилей для блока Почему мы?  */
 .about {
   position: relative;
   padding: 95px 0 60px;
@@ -2088,7 +2096,7 @@ a {
   }
 }
 
-/* Подключение стиле для блока Отзывы  */
+/* Подключение стилей для блока Отзывы  */
 .feedback {
   padding: 112px 0 39px;
   background-color: #020202;
@@ -2244,7 +2252,7 @@ a {
   }
 }
 
-/* Подключение стиле для блока Новости */
+/* Подключение стилей для блока Новости */
 .news {
   padding: 87px 0 76px;
   background-color: rgba(242, 242, 242, 0.55);
@@ -2378,4 +2386,57 @@ a {
     font-size: 14px;
     line-height: 1.4;
   }
+}
+
+/* Подключение стилей для блока с формой*/
+.request-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 666px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.request__form {
+  max-width: 397px;
+  padding: 51px 46px 58px 46px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 22px -4px;
+          box-shadow: 0 0 22px -4px;
+}
+
+.request__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  text-align: center;
+}
+
+.request__title span {
+  color: #ffc800;
+}
+
+.request__input {
+  max-width: 305px;
+  width: 100%;
+  padding-bottom: 6px;
+  margin-bottom: 40px;
+}
+
+.request__button {
+  max-width: 305px;
+  width: 100%;
+  padding: 22px 57px 22px 57px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.map {
+  position: absolute;
 }
