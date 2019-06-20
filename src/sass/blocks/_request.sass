@@ -1,34 +1,64 @@
 .request
-  &-block
-    display: flex
-    align-items: center
-    height: 666px
-    flex-basis: 50%
+  padding-top: 141px
+  position: relative
+  // background-color: change-color($light-color, $lightness: 95%, $alpha: 0.55)
   &__form
     max-width: 397px
-    padding: 51px 46px 58px 46px
+    padding: 48px 46px 58px 46px
     background-color: $light-color
     box-shadow: 0 0 22px -4px
   &__title
     margin: 0
-    margin-bottom: 50px
+    margin-bottom: 41px
     font-size: 20px
     text-transform: uppercase
     +bold
     text-align: center
+    letter-spacing: 0.3px
     span
       color: $main-color
   &__input
     max-width: 305px
     width: 100%
     padding-bottom: 6px
-    margin-bottom: 40px
+    margin-bottom: 36px
+    &:nth-child(2)
+      margin-bottom: 65px
   &__button
     max-width: 305px
     width: 100%
-    padding: 22px 57px 22px 57px
+    padding: 19px 51px 16px 53px
     font-size: 20px
     text-transform: uppercase
+    span
+      margin-left: 5px
 
 .map
   position: absolute  
+  top: 0
+  left: 0
+  right: 0
+
+@media (max-width: 992px)
+  .request
+    padding-top: 40px
+    &-wrap
+      display: flex
+      flex-direction: column
+    &__form
+      margin: 0 auto 40px
+
+  .map
+    position: static
+    order: 1
+
+@media (max-width: 576px)
+  .request
+    &__form 
+      padding: 30px 15px 45px 15px
+    &__title
+      font-size: 18px
+    &__input
+      font-size: 15px
+    &__button
+      font-size: 14px
