@@ -115,7 +115,6 @@ $(document).ready(function() {
   $('.phone').mask('+7 (999) 999-99-99');
 
   /* Иницализируем отправку формы */
-
   $('form').submit(function (event) {
     event.preventDefault();
     $.ajax({
@@ -129,6 +128,32 @@ $(document).ready(function() {
       $('.modal-thanks').fadeIn();
       $("form").trigger("reset");
     });
+    return false;
+  });
+
+  /* Плавная прокрутка к сециям по якорным ссылкам */
+  $("#menu").on("click", "a", function (event) {
+    event.preventDefault();
+    let id = $(this).attr('href');
+    let top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+
+  /* Прокрутка страницы вверх при помощи кнопки */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100 && $(this).width() > 768) {
+      $('.scroll_up').fadeIn();
+    } else {
+      $('.scroll_up').fadeOut();
+    }
+  });
+
+  $('.scroll_up').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
     return false;
   });
 

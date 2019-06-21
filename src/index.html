@@ -24,12 +24,12 @@
               <span></span>
               <span></span>
             </div>
-            <nav class="navbar__links">
-              <a href="#" class="navbar__link">Услуги</a>
+            <nav class="navbar__links" id="menu">
+              <a href="#service" class="navbar__link">Услуги</a>
               <a href="#" class="navbar__link">Цены</a>
-              <a href="#" class="navbar__link">Отзывы</a>
-              <a href="#" class="navbar__link">Новости</a>
-              <a href="#" class="navbar__link">Контакты</a>
+              <a href="#feedback" class="navbar__link">Отзывы</a>
+              <a href="#news" class="navbar__link">Новости</a>
+              <a href="#contacts" class="navbar__link">Контакты</a>
             </nav>
           </div>
           <!-- /.navbar__list -->
@@ -111,7 +111,7 @@
 
     <section class="service service__position">
       <div class="container">
-        <h2 class="section-title service__title">услуги</h2>
+        <h2 class="section-title service__title" id="service">услуги</h2>
         <div class="cards">
           <div class="card service__card service__card-1">
             <p class="service__text"><span>Монтаж систем <br>отопления</span></p>
@@ -203,7 +203,7 @@
 
     <section class="feedback feedback__position">
       <div class="container">
-        <h2 class="section-title feedback__title">Отзывы</h2>
+        <h2 class="section-title feedback__title" id="feedback">Отзывы</h2>
         <div class="feedback-slider owl-carousel owl-theme">
           <div class="feedback-slider__item">
             <div class="feedback__images">
@@ -320,7 +320,7 @@
 
     <section class="news news__position">
       <div class="container">
-        <h2 class="section-title news__title">Новости</h2>
+        <h2 class="section-title news__title" id="news">Новости</h2>
         <!-- /.section-title news__title -->
         <div class="news-block">
           <div class="news__item">
@@ -384,7 +384,7 @@
     <!-- /.request -->
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="container">
       <div class="footer-block">
         <div class="adress footer__adress">
@@ -413,6 +413,9 @@
     </div>
   </footer>
   <!-- /.footer --> 
+
+  <!-- Кнопка прокрутки страницы вверх -->
+  <a href="#" class="scroll_up">Наверх</a>
 
   <!-- Модальные окна -->
   <div class="modal" id="modal">

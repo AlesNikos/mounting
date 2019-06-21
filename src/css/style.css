@@ -412,6 +412,9 @@ h1, h2, h3, h4 {
   .container {
     width: 720px;
   }
+  .scroll_up {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -461,6 +464,21 @@ h1, h2, h3, h4 {
 
 .input:focus {
   border-bottom: 1px solid orange;
+}
+
+/* Стили для кнопки прокрутки наверх */
+.scroll_up {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 50px;
+  left: 100px;
+  display: none;
+  text-indent: -9999px;
+  background: url("../img/up-arrow.png") center no-repeat;
+  background-size: contain;
 }
 
 /* Оформление инпутов в формах */
@@ -2805,4 +2823,11 @@ div.invalid {
 
 .modal-thanks__title {
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .modal-thanks__dialog {
+    max-width: 270px;
+    padding: 20px;
+  }
 }
