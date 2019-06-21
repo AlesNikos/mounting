@@ -42,7 +42,7 @@
             <!-- /.navbar__phone -->
           </div>
           <!-- /.navbar__contacts -->
-          <button class="button navbar__button">Заказать звонок</button>
+          <button class="button navbar__button" id="button">Заказать звонок</button>
           <!-- /.button navbar__button -->
         </div>
         <!-- /.navbar__info -->
@@ -413,6 +413,27 @@
     </div>
   </footer>
   <!-- /.footer --> 
+
+  <!-- Модальные окна -->
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <h3 class="request__title modal-dialog__title">оставьте <span>заявку</span></h3>
+      <form action="mailer/smart.php" method="POST" class="form" id="modal-form">
+        <input type="text" name="user_name" class="input request__input modal-dialog__input" placeholder="Введите Ваше имя">
+        <input type="tel" name="user_phone" class="input request__input modal-dialog__input phone" placeholder="Введите Ваш номер телефона">
+        <button class="button request__button modal-dialog__button">заказать <span>звонок</span></button>
+      </form>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+  <div class="modal-thanks">
+    <div class="modal-thanks__dialog">
+      <button class="modal-thanks__close" id="thanks-close">&times;</button>
+      <h3 class="modal-thanks__title">Ваша заявка принята!</h3>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Подключение скрипта Slick slider -->

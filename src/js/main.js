@@ -10,6 +10,21 @@ $(document).ready(function() {
       .removeClass('navbar__list_open');
   });
 
+  /* Вызов модального окна */
+  $('#button').on('click', function (event) {
+    event.preventDefault();
+    $('.modal').addClass('modal_active');
+  })
+
+  $('#close').on('click', function (event) {
+    event.preventDefault();
+    $('.modal').removeClass('modal_active');
+  });
+
+  $('#thanks-close').on('click', function (event) {
+    event.preventDefault();
+    $('.modal-thanks').fadeOut();
+  });
   /* Секция Услуги */
   // $('.service__button').on('click', function(event) {
   //   event.preventDefault();
@@ -75,6 +90,27 @@ $(document).ready(function() {
     errorElement: "div"  
   });
 
+  $('#modal-form').validate({
+    rules: {
+      user_name: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      user_phone: "required"
+    },
+    messages: {
+      user_name: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Не менее {0} символов!"),
+        maxlength: jQuery.validator.format("Не более {0} символов!")
+      },
+      user_phone: "Заполните поле"
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
   /* Маска для телефона */
   $('.phone').mask('+7 (999) 999-99-99');
 
@@ -88,8 +124,8 @@ $(document).ready(function() {
       data: $(this).serialize()
     }).done(function () {
       $(this).find("input").val("");
-      alert("Ваша заявка принята");
-      // $('.thanks-page').fadeIn();
+      // alert("Ваша заявка принята");
+      $('.modal-thanks').fadeIn();
       $("form").trigger("reset");
     });
     return false;

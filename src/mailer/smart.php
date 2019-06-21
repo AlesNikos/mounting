@@ -1,7 +1,7 @@
 <?php 
 
-$name = $_POST['offer_username'];
-$phone = $_POST['offer_phone'];
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -27,7 +27,7 @@ $mail->addAddress('paurus@yandex.ru');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Оставили заявку';
+$mail->Subject = 'Оставили заявку на сайте Монтаж отопления и сантехники';
 $mail->Body    = '
 	Пользователь оставил свои данные <br> 
 	Имя: ' . $name . ' <br>
