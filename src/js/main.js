@@ -125,6 +125,7 @@ $(document).ready(function() {
     }).done(function () {
       $(this).find("input").val("");
       // alert("Ваша заявка принята");
+      $('.modal').fadeOut();
       $('.modal-thanks').fadeIn();
       $("form").trigger("reset");
     });
