@@ -115,16 +115,6 @@ $(document).ready(function() {
     }
   });
 
-  /* Настройка Slick Slider */
-  /* $('.hero-slider').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    // appendDots: $('.slick-dots'),
-    dotsClass: $('.hero__dot')
-  }); */
-
   $('.hero-slider').owlCarousel({
     loop: true,
     dots: true,
