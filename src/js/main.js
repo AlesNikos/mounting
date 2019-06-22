@@ -33,6 +33,7 @@ $(document).ready(function() {
     }
   ];
 
+  /* Меню */
   $('.navbar__icon').on('click', function (event) {
     event.preventDefault();
     $(this).closest('.navbar__list').toggleClass('navbar__list_open');
@@ -41,6 +42,19 @@ $(document).ready(function() {
     event.preventDefault();
     $(this).closest('.navbar__list')
       .removeClass('navbar__list_open');
+  });
+
+  window.onresize = function (event) {
+    $('.navbar__list').removeClass('navbar__list_open');
+  };
+
+  $(document).scroll(function () {
+    if ($(document).width() < 991 ) {
+      if ($(document).scrollTop() > $('.navbar').height() + 10)
+        $('.navbar').addClass('fixed');
+      else
+        $('.navbar').removeClass('fixed');
+    }
   });
 
   /* Вызов модального окна */
@@ -183,13 +197,13 @@ $(document).ready(function() {
     let id = $(this).attr('href');
     let top = $(id).offset().top;
     $('body,html').animate({
-      scrollTop: top
+      scrollTop: top - $('.navbar').height() - 15
     }, 1500);
   });
 
   /* Прокрутка страницы вверх при помощи кнопки */
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 100 && $(this).width() > 768) {
+    if ($(this).scrollTop() > 300 && $(this).width() > 768) {
       $('.scroll_up').fadeIn();
     } else {
       $('.scroll_up').fadeOut();
@@ -203,7 +217,14 @@ $(document).ready(function() {
     return false;
   });
 
-  /* Скрипт для появления карты при проктутке до нее */
+  $('.navbar__logo').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
+    return false;
+  });
+
+  /* Скрипт для появления карты при прокрутке до нее */
   var target = $('.footer');
   var targetPos = target.offset().top;
   var winHeight = $(window).height();
@@ -212,7 +233,7 @@ $(document).ready(function() {
   $(window).scroll(function () {
     var winScrollTop = $(this).scrollTop();
     if (winScrollTop > scrollToElem) {
-      $('#map').html('<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad920aa478fad8781a4be5da55c1c9cdc746907b68ba93b41a4a4c07659ede650&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false"></script >');
+      $('#map').html('<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad920aa478fad8781a4be5da55c1c9cdc746907b68ba93b41a4a4c07659ede650&amp;lang=ru_RU&amp;scroll=false"></script >');
       // console.log('докрутили');
       $(window).unbind('scroll');
     }
