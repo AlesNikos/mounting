@@ -4,6 +4,7 @@ let rename = require('gulp-rename');
 let uglify = require('gulp-uglify');
 let htmlmin = require('gulp-htmlmin');
 let tinyPNG = require('gulp-tinypng-compress');
+let babel = require('gulp-babel');
 
 
 
@@ -20,6 +21,9 @@ gulp.task('minify-css', function (done) {
 
 gulp.task('minify-js', function (done) {
   return gulp.src(['./src/js/*.js', '!./src/js/*.min.js'])
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
@@ -31,6 +35,12 @@ gulp.task('minify-js', function (done) {
 gulp.task('move-js', function (done) {
   return gulp.src('./src/js/*.min.js')
     .pipe(gulp.dest('dist/js/'))
+  done();
+});
+
+gulp.task('move-php', function (done) {
+  return gulp.src('./src/mailer/*/*')
+    .pipe(gulp.dest('dist/mailer/'))
   done();
 });
 
@@ -52,7 +62,7 @@ gulp.task('fonts', function (done) {
 gulp.task('tinypng', function (done) {
   return gulp.src('./src/img/**/*.{png,jpg,jpeg}')
     .pipe(tinyPNG({
-      key: 's5pturJNj4eRPPUIfkIyTXQQAovgcuj6',
+      key: 'mtbDekoKHVAZ9gYsoCwvl3YvldI0ZAUN',
       sigFile: 'images/.tinypng-sigs',
       log: true
     }))
@@ -60,6 +70,6 @@ gulp.task('tinypng', function (done) {
   done();
 });
 
-gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'move-js', 'htmlmin', 'fonts', 'tinypng', function (done) {
+gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'move-js', 'move-php', 'htmlmin', 'fonts', 'tinypng', function (done) {
   done();
 }));
