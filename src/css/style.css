@@ -1621,6 +1621,7 @@ div.invalid {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 720px;
   -ms-flex-preferred-size: 74%;
       flex-basis: 74%;
   padding-right: 54px;
@@ -1676,6 +1677,7 @@ div.invalid {
 .advantages {
   position: relative;
   z-index: 1;
+  max-width: 450px;
 }
 
 .advantages-list {
@@ -1921,6 +1923,7 @@ div.invalid {
 }
 
 .feedback__text {
+  max-width: 466px;
   margin: 0;
   margin-bottom: 23px;
   font-size: 20px;
