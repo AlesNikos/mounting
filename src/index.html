@@ -397,7 +397,7 @@
         <div class="container">
           <div class="form request__form">
             <h3 class="request__title">оставьте <span>заявку</span></h3>
-            <form  class="form" id="request-form">
+            <form class="form" id="request-form" onsubmit="ym(54167767, 'reachGoal', 'request-form'); return true;">
               <input type="text" name="user_name" class="input request__input" placeholder="Введите Ваше имя">
               <input type="tel" name="user_phone" class="input request__input phone" placeholder="Введите Ваш номер телефона">
               <button class="button request__button">заказать <span>звонок</span></button>
@@ -448,7 +448,7 @@
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="close">&times;</button>
       <h3 class="request__title modal-dialog__title">оставьте <span>заявку</span></h3>
-       <form class="form" id="modal-form"> 
+       <form class="form" id="modal-form" onsubmit="ym(54167767, 'reachGoal', 'modal-form'); return true;">
         <input type="text" name="user_name" class="input request__input modal-dialog__input" placeholder="Введите Ваше имя">
         <input type="tel" name="user_phone" class="input request__input modal-dialog__input phone" placeholder="Введите Ваш номер телефона">
         <button class="button request__button modal-dialog__button">заказать <span>звонок</span></button>
