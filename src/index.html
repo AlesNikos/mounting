@@ -114,28 +114,34 @@
         <h2 class="section-title service__title" id="service">услуги</h2>
         <div class="cards">
           <div class="card service__card service__card-1">
-            <p class="service__text"><span>Монтаж систем <br>отопления</span></p>
-            <button class="button service__button">Узнать цену</button>
+            <img src="img/service/image-1.jpg" class="service__image" alt="">
+              <p class="service__text">Монтаж систем <br>отопления</p>
+              <button class="button service__button" data-target="card-1">Узнать цену</button>
           </div>
           <div class="card service__card service__card-2">
+            <img src="img/service/image-2.jpg" class="service__image" alt="">
             <p class="service__text">Монтаж сантехнического<br>оборудования</p>
-            <button class="button service__button">Узнать цену</button>
+            <button class="button service__button"  data-target="card-2">Узнать цену</button>
           </div>
           <div class="card service__card service__card-3">
+            <img src="img/service/image-3.jpg" class="service__image" alt="">
             <p class="service__text">Монтаж канализационного<br>оборудования</p>
-            <button class="button service__button">Узнать цену</button>
+            <button class="button service__button"  data-target="card-3">Узнать цену</button>
           </div>
           <div class="card service__card service__card-4">
+            <img src="img/service/image-1.jpg" class="service__image" alt="">
             <p class="service__text">Монтаж систем <br>отопления</p>
-            <button class="button service__button">Узнать цену</button>
+            <button class="button service__button"  data-target="card-4">Узнать цену</button>
           </div>
           <div class="card service__card service__card-5">
+            <img src="img/service/image-2.jpg" class="service__image" alt="">
             <p class="service__text">Монтаж сантехнического<br>оборудования</p>
-            <button class="button service__button">Узнать цену</button>
+            <button class="button service__button"  data-target="card-5">Узнать цену</button>
           </div>
           <div class="card service__card service__card-6">
+            <img src="img/service/image-3.jpg" class="service__image" alt="">
             <p class="service__text">Монтаж канализационного<br>оборудования</p>
-            <button class="button service__button">Узнать цену</button>
+            <button class="button service__button"  data-target="card-6">Узнать цену</button>
           </div>
         </div>
       </div>
@@ -363,15 +369,12 @@
 
     <section class="request">
       <div class="request-wrap">
-        <div class="map" id="map">
-          <script type="text/javascript" charset="utf-8" async
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad920aa478fad8781a4be5da55c1c9cdc746907b68ba93b41a4a4c07659ede650&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false"></script>
-        </div>
+        <div class="map" id="map"></div>
         <!-- /.map -->
         <div class="container">
           <div class="form request__form">
             <h3 class="request__title">оставьте <span>заявку</span></h3>
-            <form action="mailer/smart.php" method="POST" class="form" id="request-form">
+            <form  class="form" id="request-form">
               <input type="text" name="user_name" class="input request__input" placeholder="Введите Ваше имя">
               <input type="tel" name="user_phone" class="input request__input phone" placeholder="Введите Ваш номер телефона">
               <button class="button request__button">заказать <span>звонок</span></button>
@@ -422,7 +425,7 @@
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="close">&times;</button>
       <h3 class="request__title modal-dialog__title">оставьте <span>заявку</span></h3>
-      <form action="mailer/smart.php" method="POST" class="form" id="modal-form">
+       <form class="form" id="modal-form"> 
         <input type="text" name="user_name" class="input request__input modal-dialog__input" placeholder="Введите Ваше имя">
         <input type="tel" name="user_phone" class="input request__input modal-dialog__input phone" placeholder="Введите Ваш номер телефона">
         <button class="button request__button modal-dialog__button">заказать <span>звонок</span></button>

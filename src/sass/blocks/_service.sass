@@ -8,31 +8,14 @@
     top: -133px
     left: -32px
   &__card
+    position: relative
     width: 377px
     min-height: 236px
     margin-bottom: 21px
     padding-top: 58px
     text-align: center
-    filter: grayscale(100%)
-    &-1
-      background: url('../img/service/image-1.png') center no-repeat
-      background-size: contain
-    &-2
-      background: url('../img/service/image-2.png') center no-repeat
-      background-size: contain
-    &-3
-      background: url('../img/service/image-3.png') center no-repeat
-      background-size: contain
-    &-4
-      background: url('../img/service/image-1.png') center no-repeat
-      background-size: contain
-    &-5
-      background: url('../img/service/image-2.png') center no-repeat
-      background-size: contain
-    &-6
-      background: url('../img/service/image-3.png') center no-repeat
-      background-size: contain
   &__text
+    position: relative
     margin: 0
     margin-bottom: 25px
     margin-left: 9px
@@ -40,10 +23,36 @@
     font-weight: 400
     line-height: 26px
     color: $light-color
+    &_active
+      position: relative
+      margin: 0
+      margin-bottom: 25px
+      margin-left: 9px
+      font-size: 20px
+      font-weight: 400
+      line-height: 26px
+      color: $text-color
+    &_tab
+      display: none
   &__button
+    position: relative
     padding: 8px 19px 8px 21px
     font-size: 15px
     text-transform: uppercase
+    &_active
+      position: relative
+      padding: 8px 36px 8px 36px
+      font-size: 15px
+      text-transform: uppercase
+      background-color: $text-color
+      color: $light-color
+      &:hover
+        background-color: lighten($text-color, 10%)
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    filter: grayscale(100%)
 .card
   &s
     display: flex
@@ -54,7 +63,8 @@
   .service
     &__card
       &:hover
-        filter: none
+        .service__image
+          filter: none
 
 @media (max-width: 1200px)
   .service
